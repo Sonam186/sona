@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Example</title>
+</head>
+<body>
+    <script>
+     let promise=new Promise((resolve,reject)=>{
+        let status=false;
+        if (status){
+            resolve ("Work Completed");
+        }
+        else{
+            reject("Not Completed");
+        }
+        })
+        console.log(promise)
+        // How to use?
+        promise.then( (val)=>{
+            console.log(val)
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+        //setTimeout Example-callback hell
+
+        setTimeout (()=>{
+            console.log("A");
+        setTimeout(()=>{
+            console.log("B");
+            setTimeout(()=>{
+                console.log("C");
+            },1000)
+
+            },2000)
+        },5000)
+
+        </script>
+        
+
+     
+</body>
+</html>
